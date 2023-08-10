@@ -6,11 +6,15 @@ class StartField(private val length: Int, private val depth: Int) {
             val row: MutableList<String> = mutableListOf()
 
             for (j in 0..<length) {
-                row.add(" * ")
+                row.add(" ${(j + 1)} ")
             }
 
             list.add(row)
         }
         return list
+    }
+
+    data object FieldCharacter {
+        const val fieldChar: String = " * "
     }
 }

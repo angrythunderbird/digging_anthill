@@ -1,13 +1,12 @@
 fun main() {
-    val field = StartField(50, 40).buildMatrix().let {
-        for(sublist in it) {
-            for (j in sublist.indices){
-                print(sublist[j])
-            }
+    val field = StartField(50, 40).buildMatrix()
+    val matrix = Passages(field).drawAnthill()
 
-            println()
+    for(sublist in matrix) {
+        for (j in sublist.indices){
+            print(sublist[j])
         }
+
+        println()
     }
-
-
 }
